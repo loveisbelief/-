@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xmile version="1.0" level="1" xmlns="http://www.systemdynamics.org/XMILE" xmlns:isee="http://iseesystems.com/XMILE">
+    <header>
+        <smile version="1.0" />
+        <name />
+        <uuid>e0c8f2b0-0ca2-4e8b-9da2-6e59760314e4</uuid>
+        <vendor>isee systems</vendor>
+        <product version="10.0" lang="en">iThink</product>
+    </header>
+    <sim_specs>
+        <start>0</start>
+        <stop>12</stop>
+        <dt>0.25</dt>
+        <method>Euler</method>
+        <time_units>Time</time_units>
+    </sim_specs>
+    <model_units />
+    <isee:prefs layer="map" grid_width="20" grid_height="50" divide_by_zero_alert="true" hide_taskbar="true" show_module_prefix="true">
+        <isee:window width="1350" height="669" />
+        <isee:security />
+        <isee:print_setup width="595" height="842" orientation="portrait" />
+    </isee:prefs>
+    <isee:equation_prefs order_by="module" />
+    <model>
+        <stock name="deer">
+            <inflow>Noname_1</inflow>
+            <non_negative />
+            <display x="108" y="110" color="blue" />
+        </stock>
+        <stock name="predactor">
+            <inflow>Noname_2</inflow>
+            <non_negative />
+            <display x="242" y="108" color="blue">
+                <label_angle>93</label_angle>
+            </display>
+        </stock>
+        <stock name="plant_life">
+            <doc>Person</doc>
+            <outflow>Noname_1</outflow>
+            <non_negative />
+            <display x="236" y="250" color="blue" />
+        </stock>
+        <flow name="Noname_1">
+            <non_negative />
+            <display x="170" y="233" color="blue">
+                <pts>
+                    <pt x="214" y="233" />
+                    <pt x="126" y="233" />
+                    <pt x="126" y="127" />
+                </pts>
+            </display>
+        </flow>
+        <flow name="Noname_2">
+            <non_negative />
+            <display x="181" y="119" color="blue">
+                <pts>
+                    <pt x="142" y="119" />
+                    <pt x="220" y="119" />
+                </pts>
+            </display>
+        </flow>
+        <display show_pages="false" page_width="595" page_height="842" page_sequence="row" pages_row_count="1" pages_column_count="1" isee:show_values_on_hover="true" isee:converter_size="medium" zoom="100" isee:animate_flows="true" isee:animate_stocks="true" isee:animate_converters="true" report_every_dt="true" scroll_x="0" scroll_y="0" />
+        <interface scroll_x="0" scroll_y="0" zoom="100">
+            <simulation_delay>0.1</simulation_delay>
+            <pages show="false" row_count="1" column_count="1" home_page="1" width="788" height="528" />
+        </interface>
+    </model>
+</xmile>
